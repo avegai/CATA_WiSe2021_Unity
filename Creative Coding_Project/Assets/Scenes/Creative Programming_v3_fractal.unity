@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _useDefaultDevice: 0
-  _deviceID: AppleHDAEngineInput:1F,3,0,1,0:1
+  _deviceID: com.rogueamoeba.Loopback:7A4C63CD-4E2D-46AE-BD15-0BBFDFDE6285
   _channel: 0
   _filterType: 0
   _autoGain: 1
