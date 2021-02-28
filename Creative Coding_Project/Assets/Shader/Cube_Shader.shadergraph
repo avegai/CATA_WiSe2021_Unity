@@ -22,7 +22,7 @@
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"eefdfa25-4379-4246-acc3-5c319ac5f48b\"\n    },\n    \"m_Name\": \"DitherSize\",\n    \"m_DefaultReferenceName\": \"Vector1_C151EDA6\",\n    \"m_OverrideReferenceName\": \"_DitherSize\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 0.8999999761581421,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 2.0\n    }\n}"
+            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"eefdfa25-4379-4246-acc3-5c319ac5f48b\"\n    },\n    \"m_Name\": \"DitherSize\",\n    \"m_DefaultReferenceName\": \"Vector1_C151EDA6\",\n    \"m_OverrideReferenceName\": \"_AlphaFactor\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": 0.8999999761581421,\n    \"m_FloatType\": 0,\n    \"m_RangeValues\": {\n        \"x\": 0.0,\n        \"y\": 2.0\n    }\n}"
         }
     ],
     "m_SerializedKeywords": [],
