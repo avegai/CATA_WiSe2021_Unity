@@ -164,6 +164,7 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
+  - id: 4
   references:
     version: 1
     00000000:
@@ -175,37 +176,47 @@ MonoBehaviour:
         _propertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
         Value0: 0
-        Value1: 0.85
+        Value1: 0.95
     00000001:
-      type: {class: FloatPropertyBinder, ns: Lasp, asm: Lasp.Runtime}
-      data:
-        Enabled: 1
-        Target: {fileID: 1997854522}
-        PropertyName: scaleInLightmap
-        _propertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-        Value0: 0
-        Value1: 5
-    00000002:
       type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
       data:
-        Enabled: 0
+        Enabled: 1
         Target: {fileID: 1704666904}
         PropertyName: localScale
         _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
         Value0: {x: 0.5, y: 0.5, z: 0.5}
-        Value1: {x: 1.5, y: 1.5, z: 1.5}
-    00000003:
-      type: {class: EulerRotationPropertyBinder, ns: Lasp, asm: Lasp.Runtime}
+        Value1: {x: 5, y: 5, z: 5}
+    00000002:
+      type: {class: FloatPropertyBinder, ns: Lasp, asm: Lasp.Runtime}
       data:
         Enabled: 1
-        Target: {fileID: 1333248462}
-        PropertyName: rotation
-        _propertyType: UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0,
+        Target: {fileID: 815215728}
+        PropertyName: resorte
+        _propertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        Value0: 1
+        Value1: 10
+    00000003:
+      type: {class: FloatPropertyBinder, ns: Lasp, asm: Lasp.Runtime}
+      data:
+        Enabled: 1
+        Target: {fileID: 1333248463}
+        PropertyName: speedyGonzalez
+        _propertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+        Value0: 5
+        Value1: 75
+    00000004:
+      type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
+      data:
+        Enabled: 1
+        Target: {fileID: 815215731}
+        PropertyName: localScale
+        _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-        Value0: {x: 0, y: 0, z: 0}
-        Value1: {x: 0, y: 90, z: 0}
+        Value0: {x: 3, y: 3, z: 3}
+        Value1: {x: 4, y: 4, z: 4}
 --- !u!4 &169768221
 Transform:
   m_ObjectHideFlags: 0
@@ -300,7 +311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388048337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -568,7 +579,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 35, y: 25, z: -35}
 --- !u!1 &1241961129
 GameObject:
@@ -601,7 +612,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -815,7 +826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333248461}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.06, y: 2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -836,13 +847,13 @@ MonoBehaviour:
   meshes:
   - {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   material: {fileID: 2100000, guid: 49076442eeb7e054b8e8869f8b40656d, type: 2}
-  maxDepth: 5
+  maxDepth: 6
   deformerMaxDepth: 1
   deformerSpringForce: 10
   deformerDamping: 1
-  childScale: 0.5
+  childScale: 0.25
   spawnProbability: 0.7
-  maxRotationSpeed: 60
+  maxRotationSpeed: 45
   maxTwist: 20
 --- !u!1 &1704666899
 GameObject:
@@ -857,7 +868,7 @@ GameObject:
   - component: {fileID: 1704666902}
   - component: {fileID: 1704666900}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -968,7 +979,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1139,10 +1150,10 @@ Transform:
   m_GameObject: {fileID: 1997854520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1997854525
 MonoBehaviour:
@@ -1188,7 +1199,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

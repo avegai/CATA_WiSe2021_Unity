@@ -1,6 +1,4 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 
@@ -9,17 +7,45 @@ public class Fractal : MonoBehaviour
 	public Mesh[] meshes;
 	public Material material;
 	public int maxDepth;
-	public int deformerMaxDepth = 1; // new
-	public float deformerSpringForce = 10f; // new
-	public float deformerDamping = 1f; // new
+	public int deformerMaxDepth = 1; // mesh deformation parameter
+	public float deformerSpringForce; // mesh deformation parameter
+	public float deformerDamping = 1f; // mesh deformation parameter
 	private int depth;
 	public float childScale = 0.5f; 
 	private Material[] materials;
 	public float spawnProbability = 0.7f;
-	public float maxRotationSpeed = 60f;
-	private float rotationSpeed;
+    public float maxRotationSpeed;
+    private float rotationSpeed;
 	public float maxTwist = 20f;
-	
+
+    public float reactiveSpring //made this property binding to make it accesible to the AudioLevelTracker Script.
+
+    {
+        get
+        {
+            return deformerSpringForce;
+        }
+
+        private set
+        {
+            deformerSpringForce = value;
+        }
+    }
+
+	public float speedyGonzalez //made this property binding to make it accesible to the AudioLevelTracker Script.
+
+	{
+		get
+		{
+			return maxRotationSpeed;
+		}
+
+		private set
+		{
+			maxRotationSpeed = value;
+		}
+	}
+
 
 	private void InitializeMaterials () {
 		materials = new Material[maxDepth + 1];
@@ -33,7 +59,7 @@ public class Fractal : MonoBehaviour
 	}
 
 	private void Start() {
-		rotationSpeed = Random.Range(-maxRotationSpeed, maxRotationSpeed);
+		rotationSpeed = Random.Range(-speedyGonzalez, speedyGonzalez);
 		transform.Rotate(Random.Range(-maxTwist, maxTwist), 0f, 0f);
 		gameObject.AddComponent<MeshFilter>().mesh =
 			meshes[Random.Range(0, meshes.Length)];
@@ -49,7 +75,7 @@ public class Fractal : MonoBehaviour
 			gameObject.AddComponent<MeshDeformer>();
 			MeshDeformer deformer = gameObject.GetComponent<MeshDeformer>();
 			deformer.damping = deformerDamping;
-			deformer.springForce = deformerSpringForce;
+			deformer.springForce = reactiveSpring;
 			gameObject.AddComponent<BoxCollider>();
 		}
 	}
@@ -74,7 +100,7 @@ public class Fractal : MonoBehaviour
 	private IEnumerator CreateChildren () {
 		for (int i = 0; i < childDirections.Length; i++) {
 			if (Random.value < spawnProbability) {
-				yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
+				yield return new WaitForSeconds(Random.Range(0.1f, 10f));
 				new GameObject("Fractal Child").AddComponent<Fractal>().
 					Initialize(this, i);
 			}
@@ -87,11 +113,11 @@ public class Fractal : MonoBehaviour
 		maxDepth = parent.maxDepth;
 		deformerMaxDepth = parent.deformerMaxDepth; // new
 		deformerDamping = parent.deformerDamping; // new
-		deformerSpringForce = parent.deformerSpringForce; // new
+		reactiveSpring = parent.reactiveSpring; // new
 		depth = parent.depth + 1;
 		childScale = parent.childScale;
 		spawnProbability = parent.spawnProbability;
-		maxRotationSpeed = parent.maxRotationSpeed;
+		speedyGonzalez = parent.speedyGonzalez;
 		maxTwist = parent.maxTwist; 
 		transform.parent = parent.transform;
 		transform.localScale = Vector3.one * childScale;
