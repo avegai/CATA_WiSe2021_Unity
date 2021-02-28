@@ -100,7 +100,7 @@ public class Fractal : MonoBehaviour
 	private IEnumerator CreateChildren () {
 		for (int i = 0; i < childDirections.Length; i++) {
 			if (Random.value < spawnProbability) {
-				yield return new WaitForSeconds(Random.Range(0.1f, 10f));
+				yield return new WaitForSeconds(Random.Range(0.1f, 5f));
 				new GameObject("Fractal Child").AddComponent<Fractal>().
 					Initialize(this, i);
 			}

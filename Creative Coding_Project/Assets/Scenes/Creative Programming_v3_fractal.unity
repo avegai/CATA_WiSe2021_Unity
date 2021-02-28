@@ -165,6 +165,7 @@ MonoBehaviour:
   - id: 2
   - id: 3
   - id: 4
+  - id: 5
   references:
     version: 1
     00000000:
@@ -217,6 +218,16 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
         Value0: {x: 3, y: 3, z: 3}
         Value1: {x: 4, y: 4, z: 4}
+    00000005:
+      type: {class: Vector3PropertyBinder, ns: Lasp, asm: Lasp.Runtime}
+      data:
+        Enabled: 1
+        Target: {fileID: 1333248462}
+        PropertyName: localScale
+        _propertyType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        Value0: {x: 1, y: 1, z: 1}
+        Value1: {x: 2, y: 2, z: 2}
 --- !u!4 &169768221
 Transform:
   m_ObjectHideFlags: 0
@@ -1150,7 +1161,7 @@ Transform:
   m_GameObject: {fileID: 1997854520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1192,7 +1203,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142278643}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9c55788a9b1484fd3bc8f7596ea9acbe, type: 3}
