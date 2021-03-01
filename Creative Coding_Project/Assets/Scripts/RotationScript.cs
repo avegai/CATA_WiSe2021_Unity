@@ -1,6 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+//The following script was a simple rotation script I wrote from scratch to implement some custom made code. 
+//I attached this script to a few of the objects to give it some rotation while in Game Mode
 
 public class RotationScript : MonoBehaviour
 {
@@ -21,8 +22,7 @@ public class RotationScript : MonoBehaviour
         transform.Rotate(Vector3.right * speed * Time.deltaTime);
 
         transform.Rotate(Vector3.down * speed * 5 * Time.deltaTime);
-
-        //transform.localScale = new Vector3(Random.RandomRange(-1f, 1f), 0.5f, 0.5f);
+        
     }
 }
  

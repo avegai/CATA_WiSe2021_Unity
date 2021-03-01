@@ -1,27 +1,29 @@
 ﻿using UnityEngine;
 
+//This script is based of a catlikecoding coding tutorial we did in class (https://catlikecoding.com/unity/tutorials/mesh-deformation/)
+
 [RequireComponent(typeof(MeshFilter))]
 public class MeshDeformer : MonoBehaviour
 {
-	public float springForce;
-	public float damping = 1f;
+	public float springForce = 10f;
+	public float damping;
 
-    public float resorte
+	//I coded this property binder called "resorte" to add it to the AudioLevelTracker object and make it Audio Reactive.
+	//This specific parameter is affecting the amount of spring-like effect of the mesh deformation. 
+	public float resorte
 
     {
         get
         {
-            return springForce;
+            return damping;
         }
 
         private set
         {
-            springForce = value;
+            damping = value;
         }
     }
-
-
-
+    
     Mesh deformingMesh;
     Vector3[] originalVertices, displacedVertices;
 	Vector3[] vertexVelocities;
@@ -75,8 +77,8 @@ public class MeshDeformer : MonoBehaviour
 		Vector3 velocity = vertexVelocities[i];
 		Vector3 displacement = displacedVertices[i] - originalVertices[i];
 		displacement *= uniformScale;
-		velocity -= displacement * resorte * Time.deltaTime;
-		velocity *= 1f - damping * Time.deltaTime;
+		velocity -= displacement * springForce * Time.deltaTime;
+		velocity *= 1f - resorte * Time.deltaTime;
 		vertexVelocities[i] = velocity;
 		displacedVertices[i] += velocity * (Time.deltaTime / uniformScale);
 	}

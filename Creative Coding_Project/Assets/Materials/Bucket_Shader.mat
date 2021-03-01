@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plane_Shader
+  m_Name: Bucket_Shader
   m_Shader: {fileID: -6465566751694194690, guid: 5663fa3d16706449991bf7ef65516a13,
     type: 3}
   m_ShaderKeywords: 

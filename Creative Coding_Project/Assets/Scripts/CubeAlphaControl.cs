@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//The following code was written by me  so I could control the Alpa parameter on the Cube's Shader.
+
 public class CubeAlphaControl : MonoBehaviour
 {
     private float alphaCube;
@@ -9,7 +11,7 @@ public class CubeAlphaControl : MonoBehaviour
     
     void Start()
     {
-        // seeThruFactor.SetFloat("_AlphaFactor", a_Alpha);        
+             
     }
 
     // Update is called once per frame
@@ -18,7 +20,9 @@ public class CubeAlphaControl : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.A))
         {
-            seeThruFactor.SetFloat("_AlphaFactor", Random.Range(0.1f, 0.9f));
+            //Everytime the user presses "A" it triggers a random number between 0.1 and 0.9.
+            //The higer the value, the more transparent it gets.
+            seeThruFactor.SetFloat("_AlphaFactor", Random.Range(0.1f, 0.9f)); 
         }
             
     }

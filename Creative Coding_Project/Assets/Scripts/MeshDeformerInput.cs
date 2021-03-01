@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+//This script is also based of a catlikecoding coding tutorial we did in class (https://catlikecoding.com/unity/tutorials/mesh-deformation/)
+//This script must be attached to the main camera or whatever object is connecting the input to the Unity environment.  
+
 public class MeshDeformerInput : MonoBehaviour
 {
 
@@ -14,7 +17,9 @@ public class MeshDeformerInput : MonoBehaviour
         }
     }
 
-	void HandleInput()
+	void HandleInput() 
+	//The mouse clicks are being read by this script to make so everytime the main mouse button clicks the sphere, it deforms it.
+	//It works in tandem with the MeshDeformer Script
 
 	{
 		
