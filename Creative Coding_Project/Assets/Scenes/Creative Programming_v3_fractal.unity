@@ -191,7 +191,7 @@ MonoBehaviour:
       type: {class: FloatPropertyBinder, ns: Lasp, asm: Lasp.Runtime}
       data:
         Enabled: 1
-        Target: {fileID: 815215728}
+        Target: {fileID: 0}
         PropertyName: 
         _propertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
@@ -464,7 +464,6 @@ GameObject:
   - component: {fileID: 815215731}
   - component: {fileID: 815215730}
   - component: {fileID: 815215729}
-  - component: {fileID: 815215728}
   - component: {fileID: 815215727}
   m_Layer: 0
   m_Name: Sphere
@@ -486,20 +485,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5000001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &815215728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815215726}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2281a44b1a31c44eeb75ccf0a3484048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  springForce: 10
-  damping: 1
 --- !u!23 &815215729
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1014,7 +999,6 @@ GameObject:
   - component: {fileID: 1997854522}
   - component: {fileID: 1997854525}
   - component: {fileID: 1997854521}
-  - component: {fileID: 1997854526}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1109,20 +1093,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!114 &1997854526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997854520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2281a44b1a31c44eeb75ccf0a3484048, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  springForce: 10
-  damping: 1
 --- !u!1 &2142278643
 GameObject:
   m_ObjectHideFlags: 0

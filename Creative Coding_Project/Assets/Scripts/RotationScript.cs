@@ -17,11 +17,11 @@ public class RotationScript : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
-        transform.Rotate(Vector3.up * speed * Time.deltaTime);
+        transform.Rotate(Vector3.up * (speed * Time.deltaTime));
 
-        transform.Rotate(Vector3.right * speed * Time.deltaTime);
+        transform.Rotate(Vector3.right * (speed * Time.deltaTime));
 
-        transform.Rotate(Vector3.down * speed * 5 * Time.deltaTime);
+        transform.Rotate(Vector3.down * (speed * 5 * Time.deltaTime));
         
     }
 }
