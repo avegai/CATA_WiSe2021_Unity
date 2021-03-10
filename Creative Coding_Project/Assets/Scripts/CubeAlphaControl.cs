@@ -18,12 +18,17 @@ public class CubeAlphaControl : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             //Everytime the user presses "A" it triggers a random number between 0.1 and 0.9.
             //The higer the value, the more transparent it gets.
-            seeThruFactor.SetFloat("_AlphaFactor", Random.Range(0.1f, 0.9f)); 
+            changeAlpha();
         }
             
+    }
+
+    public void changeAlpha()
+    {
+        seeThruFactor.SetFloat("_AlphaFactor", Random.Range(0.1f, 0.9f)); 
     }
 }

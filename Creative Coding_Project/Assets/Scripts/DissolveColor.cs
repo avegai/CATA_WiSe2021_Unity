@@ -6,28 +6,11 @@
 //I created this property to have the transparency of the object be Audio Reactive. 
 public class DissolveColor : MonoBehaviour
 {
-    private float _color;
     public Material dissolveMat;
-  
-    public float c_Color
-
-    {
-        get
-        {
-            return _color;
-        }
-
-        private set
-        {
-            _color = value;
-        }
-    }
+    public float c_Color = 0.1f;
 
     void Start()
     {
-        c_Color = 10f;
-        //Debug.Log(c_Color);
-
         dissolveMat.SetFloat("_DitherSize", c_Color);         
     }
 
@@ -35,5 +18,10 @@ public class DissolveColor : MonoBehaviour
 
     {
         dissolveMat.SetFloat("_DitherSize", c_Color);
+    }
+
+    public void modifyAlpha(float newAlpha)
+    {
+        c_Color = newAlpha;
     }
 }

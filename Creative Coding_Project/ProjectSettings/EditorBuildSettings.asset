@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Shader_test_AudioLevelTracker.unity
-    guid: f4ff01eb7294b45259b2f1f95d901d35
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Creative Programming_v3_fractal.unity
     guid: 8e8620708ac3e49c2b9f850bacdf305c
+  - enabled: 1
+    path: Assets/Scenes/Practice Project ll.unity
+    guid: 123ff4390a0a24696bd9ac8fe35a523e
   m_configObjects: {}
