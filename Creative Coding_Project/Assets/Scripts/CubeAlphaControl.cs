@@ -31,4 +31,5 @@ public class CubeAlphaControl : MonoBehaviour
     {
         seeThruFactor.SetFloat("_AlphaFactor", Random.Range(0.1f, 0.9f)); 
     }
+    
 }

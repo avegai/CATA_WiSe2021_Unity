@@ -5,7 +5,7 @@
 
 public class RotationScript : MonoBehaviour
 {
-   public float speed = 50.0f;
+   public float speed = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,11 @@ public class RotationScript : MonoBehaviour
 
         transform.Rotate(Vector3.down * (speed * 5 * Time.deltaTime));
         
+    }
+
+    public void RotationSpeed(float sliderSpeed)
+    {
+        speed = sliderSpeed;
     }
 }
  

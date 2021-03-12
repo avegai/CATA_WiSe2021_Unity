@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Cube3_Shader
-  m_Shader: {fileID: -6465566751694194690, guid: 5663fa3d16706449991bf7ef65516a13,
+  m_Shader: {fileID: -6465566751694194690, guid: 8e4b2dbfb0ec94158aa9cfe634e2bd05,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -57,6 +57,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_BA0E798D_Texture_1:
+        m_Texture: {fileID: 2800000, guid: ecb23393a0d1b424a82fff68a4c00a66, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -67,6 +71,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_BAD51EA8_Out_0:
         m_Texture: {fileID: 2800000, guid: 8027b28d0f1eb44a6bed46884e95ff19, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _diffuse:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -93,6 +101,7 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _hue: 0.37222221
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
